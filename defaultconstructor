@@ -1,0 +1,21 @@
+public class tmp{
+ tmp(){
+    System.out.println("super class");
+    }
+    
+    class bin extends tmp{
+    
+    bin(){
+     System.out.println("sub class");
+     
+     }
+     
+     class main{
+     
+     public static void main(String[] args){
+     
+     bin ref = new bin();
+     
+     }
+     }
+    
