@@ -1,0 +1,40 @@
+import java.util.Scanner;
+import java.lang.*;
+
+
+class NoticketException extends Exception{
+	NoticketException(String message){
+		super(message);
+	}
+}
+
+class Booking{
+		int newtk = 0;
+		int limit = 100;
+		int tkt = 0;
+
+
+void book()throws NoticketException{
+	System.out.println("enter number of tickets");
+	Scanner sc = new Scanner(System.in);
+	int tkt= sc.nextInt();
+	
+	newtk = newtk +tkt;
+	System.out.println(newtk);
+	if(newtk>100){
+	     throw new NoticketException("no ticket");
+	}
+	else{
+		System.out.println("ticket available");
+	}
+}
+
+public static void main(String[] args){
+	Booking obj = new Booking();
+	try{
+		obj.book();
+	}catch(NoticketException e){
+		e.printStackTrace();
+	}
+}
+}
