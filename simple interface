@@ -1,0 +1,48 @@
+import java.util.*;
+
+interface school{
+           abstract int getstudentcount();
+           abstract int gettecahercount();
+           abstract string getplace();
+           abstract int setstudent(int x);
+           abstract int setstudent(int y);
+           abstract string setplace(string str);
+           }
+       class TMHNU implements school{
+             int student;
+             int teacher;
+             string place;
+       int setstudent(int x){
+              student = x;
+              
+               }
+        int setteacher(int y){
+               teacher = y;
+               
+               }
+        string setplace(string str){
+               place = str;
+               
+               }
+               
+         int getstudentcount(){
+               return student;
+               }
+         int gettecahercount(){
+               return teacher;
+               }
+         string getplace(){
+               return place;
+               }
+               }
+         class main{
+               TMHNU obj = new TMHNU();
+               obj.setstudent(10000);
+               obj.setteacher(1000);
+               obj.setplace("MT-PATTI");
+               System.out.println(obj.getstudentcount());
+               System.out.println(obj.getteachercount());
+               System.out.println(obj.getplace());
+               }
+       
+   
